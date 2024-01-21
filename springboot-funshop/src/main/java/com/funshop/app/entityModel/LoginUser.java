@@ -1,5 +1,7 @@
 package com.funshop.app.entityModel;
 
+
+import java.time.LocalDateTime;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -27,6 +29,9 @@ public class LoginUser {
 	
 	@Column(name="LOGIN_OLD_PASSWORD")
 	private String oldPassword;
+	
+	@Column(name="DT_UPDATE")
+	private LocalDateTime datUpdate;
 	
 	public Long getCustId() {
 		return custId;
@@ -66,6 +71,14 @@ public class LoginUser {
 
 	public void setOldPassword(String oldPassword) {
 		this.oldPassword = oldPassword;
+	}
+
+	public LocalDateTime getDatUpdate() {
+		return datUpdate;
+	}
+
+	public void setDatUpdate(LocalDateTime datUpdate) {
+		this.datUpdate = datUpdate;
 	}
 	
 	

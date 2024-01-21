@@ -1,5 +1,7 @@
 package com.funshop.app.controller;
 
+import java.security.Timestamp;
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -58,6 +60,8 @@ public class FrontController {
 		loginUser.setEmailId(loginUserDetails.getEmailId());
 		loginUser.setOldPassword(loginUserDetails.getOldPassword());
 		loginUser.setPassword(loginUserDetails.getPassword());
+		
+		loginUser.setDatUpdate(LocalDateTime.now());
 		
 		LoginUser updatedUser = loginService.updateLoginUserByCustId(loginUser);
 		
